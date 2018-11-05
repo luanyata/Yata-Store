@@ -10,7 +10,7 @@ li {
     flex-grow: 1;
 }
 
-a {
+button {
     display: block;
     padding: 0.5em;
     background-color: LightGray;
@@ -22,7 +22,3 @@ a {
     font-size: 12px
 }
 
-a:hover {
-    background-color: #61DAFB;
-    color: #ffffff;
-}

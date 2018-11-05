@@ -10,22 +10,28 @@ class App extends Component {
   state = {
     query: '',
     categories: [
-      { id: 1, name: 'Eletrodomestico' },
-      { id: 2, name: 'Brinquedo' },
-      { id: 3, name: 'Eletronico' },
-      { id: 4, name: 'Games' },
-      { id: 5, name: 'Automotivo' }
-    ]
+      { id: '', name: 'Todas' },
+      { id: 'electro', name: 'Eletrodomestico' },
+      { id: 'toy', name: 'Brinquedo' },
+      { id: 'eletronic', name: 'Eletronico' },
+      { id: 'game', name: 'Games' },
+      { id: 'car', name: 'Automotivo' }
+    ],
+    category: ''
   }
 
   updateQuery = (query) => {
     this.setState(() => ({ query: query }))
   }
 
+  selectCategory = (category) => {
+    this.setState(() => ({ category }))
+  }
+
 
   render() {
 
-    let { query, categories } = this.state;
+    let { query, categories, category } = this.state;
 
     return (
       <div className="App">
@@ -41,8 +47,8 @@ class App extends Component {
         </header>
 
         <div id='context'>
-          <Menu categories={categories} />
-          <Showcase query={query} />
+          <Menu categories={categories} selectCategory={this.selectCategory} />
+          <Showcase query={query} categorySelected={category} />
         </div>
 
 

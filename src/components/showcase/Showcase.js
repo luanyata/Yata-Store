@@ -19,12 +19,13 @@ class Showcase extends Component {
     }
 
     render() {
-        const { query } = this.props;
+        const { query, categorySelected } = this.props;
         const { products } = this.state;
 
-        const showingProduts = query === '' ?
+        let showingProduts = query === '' ?
             products : products.filter((p) => (p.name.toLowerCase().includes(query.toLowerCase())));
 
+        showingProduts = categorySelected === '' ? showingProduts : showingProduts.filter((p) => (p.category === categorySelected))
 
         return (
             <div id='showcase'>
@@ -34,7 +35,6 @@ class Showcase extends Component {
             </div>
         )
     }
-
 }
 
 export default Showcase;

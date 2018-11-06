@@ -3,27 +3,31 @@
     margin: 15px;
     width: 172px;
     height: 245px;
+    cursor: pointer;
 }
 
 .money {
     position: relative;
-    top: 40%;
+    top: 5%;
     font-size: 20px;
     font-weight: bolder;
 }
 
-.name-product{
+.name-product {
     position: relative;
-    top: 40%;
-    font-size: 15px; 
+    top: 5%;
+    font-size: 15px;
 }
 
 .img-product {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
+    height: 170px;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 50%;
     flex-shrink: 0;
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: #000000;
 }
